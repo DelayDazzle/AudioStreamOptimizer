@@ -7,28 +7,10 @@
     <RootNamespace>DelayDazzle.AudioStreamOptimizer</RootNamespace>
     <Version>1.0.0</Version>
     <Authors>DelayDazzle</Authors>
+    <!-- 关键设置：NONE 告诉 ModBuildConfig 不要找本地游戏，去 NuGet 下 -->
+    <GamePath>NONE</GamePath>
   </PropertyGroup>
-
   <ItemGroup>
-    <Reference Include="StardewModdingAPI">
-      <HintPath>libs/StardewModdingAPI.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="StardewValley">
-      <HintPath>libs/StardewValley.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="StardewValley.GameData">
-      <HintPath>libs/StardewValley.GameData.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="SMAPI.Toolkit.CoreInterfaces">
-      <HintPath>libs/SMAPI.Toolkit.CoreInterfaces.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="0Harmony">
-      <HintPath>libs/0Harmony.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
   </ItemGroup>
 </Project>
