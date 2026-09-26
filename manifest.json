@@ -1,0 +1,9 @@
+{
+  "Name": "Audio Stream Optimizer：音频流优化器",
+  "Author": "DelayDazzle",
+  "Version": "1.0.0",
+  "Description": "将 SVE 和 RSV 中的事件/角色主题曲改为流式加载，以降低安卓设备的内存占用。",
+  "UniqueID": "DelayDazzle.AudioStreamOptimizer",
+  "EntryDll": "AudioStreamOptimizer.dll",
+  "MinimumApiVersion": "4.0.0"
+}
