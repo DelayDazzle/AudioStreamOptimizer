@@ -7,10 +7,31 @@
     <RootNamespace>DelayDazzle.AudioStreamOptimizer</RootNamespace>
     <Version>1.0.0</Version>
     <Authors>DelayDazzle</Authors>
-    <!-- 禁用自动部署到游戏文件夹 -->
-    <EnableModDeploy>false</EnableModDeploy>
+    <!-- 忽略版本冲突警告，防止编译中断 -->
+    <NoWarn>MSB3277;NU1605;CS1701;CS1702</NoWarn>
   </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+    <!-- 引用 libs 文件夹里的 5 个 .NET 6 DLL -->
+    <Reference Include="StardewModdingAPI">
+      <HintPath>libs/StardewModdingAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="StardewValley">
+      <HintPath>libs/StardewValley.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="StardewValley.GameData">
+      <HintPath>libs/StardewValley.GameData.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SMAPI.Toolkit.CoreInterfaces">
+      <HintPath>libs/SMAPI.Toolkit.CoreInterfaces.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>libs/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
 </Project>
