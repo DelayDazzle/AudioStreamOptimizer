@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>AudioStreamOptimizer</AssemblyName>
+    <RootNamespace>DelayDazzle.AudioStreamOptimizer</RootNamespace>
+    <Version>1.0.0</Version>
+    <Authors>DelayDazzle</Authors>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
+  </ItemGroup>
+</Project>
