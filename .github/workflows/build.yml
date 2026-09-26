@@ -3,7 +3,7 @@ name: Build SMAPI Mod
 on:
   push:
     branches: [ "main" ]
-  workflow_dispatch: # 允许在 Actions 页面手动点击运行
+  workflow_dispatch:
 
 jobs:
   build:
@@ -18,11 +18,8 @@ jobs:
       with:
         dotnet-version: '6.0.x'
 
-    - name: Restore dependencies
-      run: dotnet restore
-
     - name: Build Mod
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release
 
     - name: Upload Mod Files
       uses: actions/upload-artifact@v4
