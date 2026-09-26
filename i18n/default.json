@@ -1,0 +1,5 @@
+{
+  "gmcm.section.title": "Audio Streaming Settings",
+  "gmcm.enable-streaming.name": "Enable Streaming",
+  "gmcm.enable-streaming.tooltip": "Stream SVE and RSV event/character music to reduce memory usage. Requires a game restart to take effect."
+}
