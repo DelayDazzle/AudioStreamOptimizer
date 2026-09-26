@@ -3,7 +3,7 @@ name: Build SMAPI Mod
 on:
   push:
     branches: [ "main" ]
-  workflow_dispatch: # 允许在 Actions 页面手动点击运行
+  workflow_dispatch:
 
 jobs:
   build:
@@ -13,10 +13,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Setup .NET 9.0
+    - name: Setup .NET 6.0
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '9.0.x'
+        dotnet-version: '6.0.x'
 
     - name: Restore dependencies
       run: dotnet restore
@@ -29,6 +29,6 @@ jobs:
       with:
         name: AudioStreamOptimizer
         path: |
-          bin/Release/net9.0/AudioStreamOptimizer.dll
+          bin/Release/net6.0/AudioStreamOptimizer.dll
           manifest.json
           i18n/
