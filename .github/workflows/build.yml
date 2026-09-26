@@ -13,10 +13,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Setup .NET 6.0
+    - name: Setup .NET 9.0
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '9.0.x'
 
     - name: Restore dependencies
       run: dotnet restore
@@ -29,6 +29,6 @@ jobs:
       with:
         name: AudioStreamOptimizer
         path: |
-          bin/Release/net6.0/AudioStreamOptimizer.dll
+          bin/Release/net9.0/AudioStreamOptimizer.dll
           manifest.json
           i18n/
