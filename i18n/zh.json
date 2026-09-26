@@ -1,0 +1,5 @@
+{
+  "gmcm.section.title": "音频流式加载设置",
+  "gmcm.enable-streaming.name": "启用流式加载",
+  "gmcm.enable-streaming.tooltip": "将 SVE 和 RSV 的事件/角色音乐改为流式加载，以降低内存占用。更改后需重启游戏生效。"
+}
