@@ -7,11 +7,12 @@
     <RootNamespace>DelayDazzle.AudioStreamOptimizer</RootNamespace>
     <Version>1.0.0</Version>
     <Authors>DelayDazzle</Authors>
+    <!-- 关键配置：告诉构建工具在云端环境跳过查找游戏目录 -->
+    <EnableModBuildConfig>true</EnableModBuildConfig>
+    <GamePath></GamePath>
   </PropertyGroup>
   <ItemGroup>
-    <!-- 引用 SMAPI 核心库 -->
-    <PackageReference Include="StardewModdingAPI" Version="4.3.2" />
-    <!-- 引用星露谷游戏数据接口，用于 AudioCueData -->
-    <PackageReference Include="StardewValley.GameData" Version="1.6.0" />
+    <!-- 引用官方模组构建配置包，版本用最新的 4.4.0 -->
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
   </ItemGroup>
 </Project>
