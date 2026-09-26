@@ -20,22 +20,24 @@ namespace DelayDazzle.AudioStreamOptimizer
 
         private void OnGameLaunched(object sender, GameLaunchedEventArgs e)
         {
-            // 1. 注册 GMCM 菜单
+            // 1. 注册 GMCM 菜单（使用 i18n 翻译）
             var gmcm = Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
             if (gmcm != null)
             {
                 gmcm.Register(ModManifest, () => Config = new ModConfig(), () => Helper.WriteConfig(Config));
-                gmcm.AddSectionTitle(ModManifest, () => "音频流式加载设置");
+                
+                // 使用 Helper.Translation.Get() 读取翻译
+                gmcm.AddSectionTitle(ModManifest, () => Helper.Translation.Get("gmcm.section.title"));
                 gmcm.AddBoolOption(
                     ModManifest,
                     () => Config.EnableStreaming,
                     (value) => Config.EnableStreaming = value,
-                    () => "启用流式加载",
-                    () => "将 SVE 和 RSV 的事件/角色音乐改为流式加载，以降低内存占用。更改后需重启游戏生效。"
+                    () => Helper.Translation.Get("gmcm.enable-streaming.name"),
+                    () => Helper.Translation.Get("gmcm.enable-streaming.tooltip")
                 );
             }
 
-            // 2. 如果玩家关闭了流式加载，则直接跳过，使用游戏默认设置
+            // 2. 如果玩家关闭了流式加载，则直接跳过
             if (!Config.EnableStreaming)
             {
                 Monitor.Log("流式加载已被玩家禁用，使用游戏默认音频设置。", LogLevel.Info);
@@ -93,7 +95,7 @@ namespace DelayDazzle.AudioStreamOptimizer
                 "Poise",                // RSV - Ysabelle 角色主题曲
                 "SubtlyComfy"           // RSV - Philip 角色主题曲
             };
-
+            
             // 5. 遍历并修改
             foreach (var cueId in cueIdsToStream)
             {
