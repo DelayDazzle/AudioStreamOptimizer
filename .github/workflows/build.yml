@@ -26,6 +26,6 @@ jobs:
       with:
         name: AudioStreamOptimizer
         path: |
-          bin/Release/net6.0/AudioStreamOptimizer.dll
+          bin/Release/net8.0/AudioStreamOptimizer.dll
           manifest.json
           i18n/
